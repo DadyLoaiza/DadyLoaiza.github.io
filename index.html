@@ -2,164 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>Introducción IA - Trabajos</title>
     <style>
-        *{
-            box-sizing: border-box;
-        }
-        
-        body{
-            font-family: 'Roboto', sans-serif;
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
-        }
-        
-        h1{font-size: 3.5em;}
-        h2{font-size: 2.7em;}
-        h3{font-size: 2em;}
-        p{font-size: 1.25em;}
-        ul{list-style: none;}
-        
-        button{ 
-            font-size: 1.5em;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 10px;
-            border: 2px solid rgba(0,0,0,0.5);
-            box-shadow: 2px 2px 10px rgba(36, 0, 0, 0.5);
-            color: white;
-            background-color: rgb(70, 30, 216);
-            cursor: pointer;
-        }
-        
-        button:hover{
-            background-color: rgba(70, 30, 216, 0.8);
-        }
-        
-        .container{
-            max-width: 1400px;
-            margin: auto;
-        }
-        
-        .color-acento{
-            color: rgb(70, 30, 216);
-        }
-        
-        header{
-            background-color: rgb(255, 200, 0);
-            color: white;
+            padding: 0;
+            background-color: #f4f8ff;
             text-align: center;
+            color: #333;
+        }
+
+        /* Estilo del encabezado */
+        header {
+            background: #ffdb58;
+            color: #00509e;
+            padding: 15px 0;
             font-weight: bold;
         }
-        
-        header .logo{
-            font-size: 2em;
-            margin-bottom: 10px;
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
         }
-        
-        header .container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        header nav{
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            padding-bottom: 25px;
-        }
-        
-        header a{
-            padding: 5px 12px;
+
+        nav a {
+            color: #00509e;
             text-decoration: none;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
+            margin: 0 15px;
+            font-size: 18px;
         }
-        
-        header a:hover{
-            color: rgb(70, 30, 216);
+
+        /* Sección principal con fondo */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #a1cdf3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
-        
-        #hero{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
-            height: 60vh;
-            background-image: linear-gradient(
-                0deg,
-                rgba(0,0,0,0.5),
-                rgba(0,0,0,0.5)
-            ),
-            url("media/IA.jpg");
-        }
-        
-        #hero h1{
+
+        /* Botones */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #6ea8fe;
             color: white;
-            font-size: 3em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #00509e;
+        }
+
+        /* Contenedor de PDFs */
+        .pdf-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 20px;
         }
-        
-        #hero h2{
-            color: white;
-            font-size: 1em;
-            margin-top: 0;
-        }
-        
-        #ts .container{
-            background-color: rgb(255, 244, 206);
-            text-align: center;
-            padding: 200px 12px;
-        }
-        
-        @media (min-width: 768px){
-            header{
-                position: fixed;
-                width: 100%;
-            }
-            header .container{
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            header nav{
-                flex-direction: row;
-                padding-right: 20px;
-                padding-bottom: 0;
-            }
-            #hero h1{
-                font-size: 5em;
-            }
-            #hero h2{
-                font-size: 1.5em;
-            }
-            #ts .container{
-                display: flex;
-                justify-content: center;
-            }
-            #ts .texto{
-                width: 50%;
-                max-width: 600px;
-                text-align: initial;
-                padding-left: 50px;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-            }
-            #ts h2{
-                margin-top: 0px;
-            }
-            #ts .img-container{
-                background-image: url("media/semestre.png");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-                height: 150px;
-                width: 150px;
-            }
+
+        embed {
+            width: 300px; 
+            height: 200px; 
+            max-width: 100%; 
+            max-height: 250px;
+            margin: 10px 0;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            object-fit: contain;
+            background: white;
         }
     </style>
 </head>
@@ -168,21 +90,78 @@
         <div class="container">
             <p class="logo">Introducción IA</p>
             <nav>
-                <a href="#">INTRODUCCIÓN A LA INTELIGENCIA ARTIFICIAL</a>
+                <a href="#">Volver a la Página Principal</a>
             </nav>
         </div>
     </header>
-    <section id="hero">
-        <h1>Introducción a la Inteligencia Artificial<br>Sergio Arboleda</h1>
+
+    <section class="container">
+        <h1>Trabajos Primer Semestre</h1>
         <h2>Dady Sneider Loaiza Loaiza</h2>
     </section>
-    <section id="ts">
-        <div class="container">
-            <div class="img-container"></div>
-            <div class="texto">
-                <h2>Trabajos <span class="color-acento">Primer Semestre</span></h2>
-                <a href="https://sneidi08.github.io" target="_blank"><button>CLICK</button></a>
-            </div>
+
+    <section class="container">
+        <h2>Primer Taller</h2>
+        <hr>
+        <h3>Taller del Docente</h3>
+        <p>Realizar el teorema de Euler a través del problema del caballo de ajedrez</p>
+        <hr>
+        <h3>Entrega del Estudiante</h3>
+        <div class="pdf-container">
+            <embed src="docs/1taller.pdf" type="application/pdf">
+            <button onclick="window.location.href='docs/1taller.pdf'">Descargar PDF</button>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Segundo Taller</h2>
+        <hr>
+        <h3>Taller del Docente</h3>
+        <div class="pdf-container">
+            <embed src="docs/Taller_IA_Historia.pdf" type="application/pdf">
+            <button onclick="window.location.href='docs/Taller_IA_Historia.pdf'">Descargar</button>
+        </div>
+        <hr>
+        <h3>Entrega del Estudiante</h3>
+        <div class="pdf-container">
+            <embed src="docs/Trabajo HISTORIA DE LA IA.pdf" type="application/pdf">
+            <button onclick="window.location.href='docs/Trabajo HISTORIA DE LA IA.pdf'">Descargar</button>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Tercer Taller</h2>
+        <hr>
+        <h3>Taller del Docente</h3>
+        <div class="pdf-container">
+            <embed src="docs/Taller_Tipologias_IA.pdf" type="application/pdf">
+            <button onclick="window.location.href='docs/Taller_Tipologias_IA.pdf'">Descargar</button>
+        </div>
+        <hr>
+        <h3>Entrega del Estudiante</h3>
+        <div class="pdf-container">
+            <embed src="docs/TIPOLOGÍAS DE LA INTELIGENCIA ARTIFICIAL.pdf" type="application/pdf">
+            <button onclick="window.location.href='docs/TIPOLOGÍAS DE LA INTELIGENCIA ARTIFICIAL.pdf'">Descargar</button>
+        </div>
+        <div class="pdf-container">
+            <embed src="docs/Mapa conceptual.pdf" type="application/pdf">
+            <button onclick="window.location.href='docs/Mapa conceptual.pdf'">Descargar</button>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Cuarto Taller</h2>
+        <hr>
+        <h3>Taller del Docente</h3>
+        <div class="pdf-container">
+            <embed src="docs/Juegos de IA(1).pdf" type="application/pdf">
+            <button onclick="window.location.href='docs/Juegos de IA(1).pdf'">Descargar</button>
+        </div>
+        <hr>
+        <h3>Entrega del Estudiante</h3>
+        <div class="pdf-container">
+            <embed src="docs/Presentacion 1.pdf" type="application/pdf">
+            <button onclick="window.location.href='docs/Presentacion 1.pdf'">Descargar</button>
         </div>
     </section>
 </body>
