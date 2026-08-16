@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Eimy Sofia cumple 2 añitos 🌸</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- PANTALLA DE BIENVENIDA (se oculta al abrir)    -->
+  <!-- ============================================= -->
+  <section id="bienvenida" class="pantalla-bienvenida">
+    <div class="decor-flotantes" aria-hidden="true">
+      <span class="flota corazon" style="--d:0">💗</span>
+      <span class="flota estrella" style="--d:1">⭐</span>
+      <span class="flota flor" style="--d:2">🌸</span>
+      <span class="flota mariposa" style="--d:3">🦋</span>
+      <span class="flota corazon" style="--d:4">💕</span>
+      <span class="flota estrella" style="--d:5">✨</span>
+      <span class="flota flor" style="--d:6">🌷</span>
+      <span class="flota mariposa" style="--d:7">🦋</span>
+    </div>
+
+    <div class="tarjeta-bienvenida">
+      <div class="osito-orejas" aria-hidden="true">
+        <span class="oreja oreja-izq"></span>
+        <span class="oreja oreja-der"></span>
+        <span class="carita-osito">🐻</span>
+      </div>
+
+      <p class="eyebrow-bienvenida">Estás invitad@ a celebrar con</p>
+      <h1 class="nombre-bienvenida">Eimy Sofia</h1>
+      <p class="mensaje-bienvenida">¡Estás invitado a celebrar mis <span class="resaltar-edad">2 añitos</span>!</p>
+
+      <button id="btn-abrir" class="btn-abrir" type="button">
+        <span>Abrir invitación</span>
+        <span class="sobre" aria-hidden="true">💌</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Lienzo de confeti -->
+  <canvas id="confeti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================= -->
+  <!-- CONTENIDO PRINCIPAL                            -->
+  <!-- ============================================= -->
+  <main id="contenido" class="contenido oculto">
+
+    <!-- Sendero de huellitas decorativo, marca el hilo entre secciones -->
+    <div class="sendero-huellas" aria-hidden="true">
+      <span class="huella">🐾</span>
+      <span class="huella">🐾</span>
+      <span class="huella">🐾</span>
+      <span class="huella">🐾</span>
+    </div>
+
+    <!-- ===== CARTA PRINCIPAL ===== -->
+    <section class="seccion carta-principal" id="carta">
+      <div class="fondo-hojas" aria-hidden="true"></div>
+
+      <div class="marco-foto reveal">
+        <div class="marco-foto-interior">
+          <img src="assets/img/foto-eimy.jpg" alt="Eimy Sofia sonriendo en un jardín" class="foto-eimy">
+        </div>
+        <span class="corona-flores" aria-hidden="true">🌸🌷🌼🌸</span>
+      </div>
+
+      <div class="wreath-edad reveal" aria-hidden="true">
+        <span class="wreath-numero">2</span>
+        <span class="wreath-anillo">🌿🌸🌿🌸🌿🌸🌿🌸</span>
+      </div>
+      <p class="wreath-etiqueta reveal">añitos</p>
+
+      <h2 class="titulo-carta reveal">Feliz cumpleaños, mi Eimy Sofia 💕</h2>
+
+      <div class="texto-carta reveal">
+        <p>Hoy el bosque entero se pone su mejor vestido rosa para celebrarte, porque una de sus flores más lindas está cumpliendo <strong>2 añitos</strong>.</p>
+        <p>Como Masha en su bosque encantado, tú llenas cada rincón de risas, travesuras y ternura. Gracias por pintar nuestros días de colores pastel y por esa sonrisa que enamora a todos, incluso al osito más gruñón.</p>
+        <p>Queremos celebrar este día tan especial contigo, rodeados de cariño, flores y muchos abrazos. ¡Ven a bailar, reír y soplar tu velita! 🎂✨</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTADOR REGRESIVO ===== -->
+    <section class="seccion seccion-contador" id="contador-seccion">
+      <div class="sendero-huellas sendero-mini" aria-hidden="true">
+        <span class="huella">🐾</span><span class="huella">🐾</span>
+      </div>
+
+      <h2 class="titulo-seccion reveal">Faltan para el gran día</h2>
+      <p class="subtitulo-seccion reveal">29 de agosto de 2026 · 3:00 p. m.</p>
+
+      <div class="contador reveal" id="contador">
+        <div class="contador-unidad">
+          <span class="contador-numero" id="dias">00</span>
+          <span class="contador-etiqueta">días</span>
+        </div>
+        <div class="contador-unidad">
+          <span class="contador-numero" id="horas">00</span>
+          <span class="contador-etiqueta">horas</span>
+        </div>
+        <div class="contador-unidad">
+          <span class="contador-numero" id="minutos">00</span>
+          <span class="contador-etiqueta">min</span>
+        </div>
+        <div class="contador-unidad">
+          <span class="contador-numero" id="segundos">00</span>
+          <span class="contador-etiqueta">seg</span>
+        </div>
+      </div>
+
+      <div class="contador-final oculto" id="contador-final">
+        <p>🎉 ¡Hoy es el gran día! ¡Vamos a celebrar! 🎉</p>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN DE CELEBRACIÓN ===== -->
+    <section class="seccion seccion-celebracion" id="celebracion">
+      <div class="sendero-huellas sendero-mini" aria-hidden="true">
+        <span class="huella">🐾</span><span class="huella">🐾</span>
+      </div>
+
+      <h2 class="titulo-seccion reveal">Los detalles de la fiesta</h2>
+
+      <div class="tarjeta-celebracion reveal">
+        <span class="cinta-decorativa" aria-hidden="true">🌸 🌸 🌸</span>
+
+        <div class="dato-celebracion">
+          <span class="dato-icono" aria-hidden="true">📅</span>
+          <div>
+            <p class="dato-titulo">Fecha</p>
+            <p class="dato-valor">29 de agosto de 2026</p>
+          </div>
+        </div>
+
+        <div class="dato-celebracion">
+          <span class="dato-icono" aria-hidden="true">🕒</span>
+          <div>
+            <p class="dato-titulo">Hora</p>
+            <p class="dato-valor">3:00 p. m.</p>
+          </div>
+        </div>
+
+        <div class="dato-celebracion">
+          <span class="dato-icono" aria-hidden="true">📍</span>
+          <div>
+            <p class="dato-titulo">Lugar</p>
+            <p class="dato-valor">Carrera 74H #62I-28 Sur</p>
+          </div>
+        </div>
+
+        <p class="mensaje-final">¡Te esperamos con mucha ilusión para celebrar juntos! 🧸🎈</p>
+      </div>
+    </section>
+
+    <footer class="pie">
+      <p>Con todo nuestro amor, la familia de Eimy Sofia 🐻🌸</p>
+    </footer>
+  </main>
+
+  <!-- ============================================= -->
+  <!-- REPRODUCTOR DE MÚSICA FLOTANTE                 -->
+  <!-- ============================================= -->
+  <audio id="audio-fondo" src="assets/audio/cancion-cumple.mp3" loop preload="none"></audio>
+
+  <div class="reproductor oculto" id="reproductor">
+    <button id="btn-play" class="btn-play" type="button" aria-label="Reproducir música">
+      <span id="icono-play">▶️</span>
+    </button>
+    <input type="range" id="control-volumen" class="control-volumen" min="0" max="100" value="60" aria-label="Volumen">
+    <span class="nota-musical" aria-hidden="true">🎵</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
